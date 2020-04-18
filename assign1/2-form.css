@@ -1,11 +1,91 @@
 body {
   background-color: rgb(0, 78, 78);
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #ccc;
+  color: #333;
 }
 
-/* Colors used include:
-    - #aaa;
-    - #006060;
-    - #008080;
-*/
+h1{
+  color: #008080;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=checkbox]{
+  background-color: #45a049;
+}
+
+input[type=submit] {
+  background-color: #006060;
+  color: #ccc;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=submit]:hover{
+  background-color: #333;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2 ;
+  padding: 40px;
+  position: relative;
+  width: 30%;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, 20%);
+}
+
+.verticalContainer1 {
+  margin: 0;
+  position: relative;
+}
+
+.required{
+  color: #aaa;
+}
+
+@media all and (max-width: 476px) {
+  .container {
+    width: 90%;
+  }
+
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    width: 70%;
+  }
+ 
+}
+
+@media all and (max-width: 970px) {
+  .container {
+    width: 40%;
+  }
+ 
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    width: 60%;
+  }
+ 
+}
+
+

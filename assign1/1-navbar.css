@@ -4,4 +4,30 @@
   color: #333;
 }
 
+#navContainer ul{
+  margin: 0;
+  padding: 0;
+}
+
+#navContainer ul li{
+  display: initial;
+  float: left;
+}
+
+#navContainer ul li a{
+  text-decoration: none;
+  padding: 1em 3em;
+  display: block;
+}
+
+#navContainer ul li a:hover{
+    text-decoration: underline;
+    text-decoration-color: #008080;
+    text-underline-position: below;
+    text-decoration-thickness: 0.2em;
+    text-underline-position: auto;
+    color:#008080;
+    text-underline-position: under;
+}
+
 /* The accent color used is #008080 */

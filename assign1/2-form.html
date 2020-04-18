@@ -8,7 +8,27 @@
     <link rel="stylesheet" href="2-form.css" />
   </head>
   <body>
-    <!-- add your code below -->
-    <p>exercise #2 - creating a form</p>
+      <div class="container">
+        <div class="verticalContainer">
+
+        <h1>CONTACT FORM</h1>
+        <form>
+          <label for="fname">Name</label>
+          <label class="required" for="fnrequired">(required)</label>
+          <input type="text" id="fname" name="fname" required>
+
+          <label for="femail">Email Address</label>
+          <label class="required" for="erequired">(required)</label>
+          <input type="text" id="email" name="email" required>
+          
+          <label for = "Comment">Comments?</label>
+          <textarea id = "Comments" name="Comment" style="height:200px"></textarea>
+          
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Sign up for the newsletter 
+          <br>
+          <input type="submit" value="Submit">
+        </form> 
+      </div>
+    </div>
   </body>
 </html>
