@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="6-bootstrap-form.css" />
+    <title>Bootstrap Form Exercise</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contact Form</h1>
+      <form>
+        <div class="form-group ">
+          <label for="fname">Name *</label>
+          <input type="text" class="form-control form-control-lg" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group col-xs-4">
+          <label for="email">Email *</label>
+          <input type="text" class="form-control form-control-lg" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="lblmessage">Submit your message</label>
+          <textarea id="txtmessage" rows="5" class="form-control form-control-lg" name="Comment"></textarea>
+        </div>
+
+        <div class="custom-control custom-checkbox mr-sm-2">
+          <input type="checkbox" class="custom-control-input" id="customControlAutosizing" name="remember"> 
+          <label class="custom-control-label" for="customControlAutosizing">Sign up for the newsletter</label>
+        </div>
+        <br>
+        <div class="form-group">
+          <input type="submit" class="btn btn-primary btn-xl" value="Submit">
+          <input type="reset" class="btn btn-secondary btn-xl" value="Reset">
+        </div>
+      </div>
+      </form> 
+    </div>
+  </body>
+</html>
+
+
+
+

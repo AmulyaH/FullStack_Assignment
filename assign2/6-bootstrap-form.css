@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(34, 32, 32);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14pt;
+    color: #333;
+  }
+
+.container{
+    background-color: #fff;
+    padding: 35px;
+    width: 25%;
+    margin-top: 6em;
+    
+    border-radius: 5px;
+}
+.btn-xl {
+    padding: 10px 20px;
+    font-size: 14pt;
+    border-radius: 6px;
+    width:49%;
+    text-align: center;
+}
+.h1{
+    padding: 10px;
+    text-align: center;
+}
+
+@media all and (-width: 476px) {
+    .container {
+      width: 30%;
+    }
+  }
+  
+  @media all and (max-width: 768px) {
+    .container {
+      width: 30%;
+    }
+  }
+  
+  @media all and (max-width: 970px) {
+    .container {
+      width: 30%;
+    }
+   
+  }
+  
+  @media all and (max-width: 768px) {
+    .container {
+      width: 30%;
+    }
+  }
+  

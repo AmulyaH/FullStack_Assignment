@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  font-size: 1.1em;
+  color: white;
+}
+
+.container{
+  width: 60%;
+}
+
+.container > div{
+  padding: 1px;
+}
+
+.container > div > div{
+  padding: 50px;
+}
+
+.col-2{
+  background-color: navy;
+}
+.col-3{
+  background-color: purple;
+}
+.col-4{
+  background-color: teal;
+}
+.col-6{
+  background-color: palevioletred;
+}
+.col-8{
+  background-color: coral;
+}
+.col-12{
+  background-color: green;
+}
+/* 
+  Colors used in this exercise: 
+  background-color: navy;
+  background-color: purple;
+  background-color: teal;
+  background-color: palevioletred;
+  background-color: coral;
+  background-color: green; 
+*/

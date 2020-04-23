@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.3em;
+}
+
+.flex-item {
+  width: 200px;
+  height: 100px;
+  margin: 1px;
+  padding: 10px;
+  background-color: purple;
+  color: white;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  padding: 10px;
+  flex-direction: column-reverse;
+  height: 40vh;
+  align-content: space-around;
+}
+
+.item1{
+  order: 10;
+}
+/* Add your code here */
