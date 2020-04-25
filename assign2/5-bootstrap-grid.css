@@ -4,34 +4,34 @@
   color: white;
 }
 
-.container{
-  width: 60%;
+.container > div > div > div
+{
+  height: 120px;
+  padding: 10px;
+  margin: 0.03em;
 }
 
-.container > div{
-  padding: 1px;
+.container > div > div
+{
+  padding: 0.01em;
 }
 
-.container > div > div{
-  padding: 50px;
-}
-
-.col-2{
+.row1colur{
   background-color: navy;
 }
-.col-3{
+.row2colur{
   background-color: purple;
 }
-.col-4{
+.row4colur{
   background-color: teal;
 }
-.col-6{
+.row3colur{
   background-color: palevioletred;
 }
-.col-8{
+.row5colur{
   background-color: coral;
 }
-.col-12{
+.row6colur{
   background-color: green;
 }
 /* 
