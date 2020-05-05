@@ -1,1 +1,6 @@
-/* Add your styles here  */
+body {
+    background-color: rgb(34, 32, 32);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14pt;
+    color: #333;
+  }
