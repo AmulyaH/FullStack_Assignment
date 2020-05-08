@@ -14,7 +14,7 @@
     <title>JavaScript Form Exercise</title>
   </head>
   <body class="bg-dark">
-    <form class="bg-light border rounded w-50 mx-auto mt-5 p-3">
+    <form class="bg-light border rounded w-50 mx-auto mt-5 p-3" onsubmit=" event.preventDefault(); saveForm()">
       <h2 class="mt-2 mb-4">Contact Form</h2>
       <div class="form-group row">
         <div class="col-sm-12">
@@ -40,7 +40,7 @@
       <div class="form-group row">
         <div class="col-sm-12">
           <div class="custom-control custom-checkbox mr-sm-2">
-            <input type="checkbox" class="custom-control-input" id="chk" name="remember"> 
+            <input type="checkbox" class="custom-control-input" id="chk" value="on" name="remember"> 
             <label class="custom-control-label" for="chk">Sign up for the newsletter</label>
         </div>
         </div>
@@ -48,7 +48,7 @@
       
       <div class="form-group row">
         <div class="col-sm-6">
-          <input type="button" id="btnSubmit" onclick ="saveForm()" class="btn btn-primary col-sm-12 btn-xl" value="Submit">
+          <input type="submit" id="btnSubmit"  class="btn btn-primary col-sm-12 btn-xl" value="Submit">
         </div>
         <div class="col-sm-6">
           <input type="reset" class="btn btn-secondary col-sm-12 btn-xl" value="Reset">
