@@ -14,7 +14,8 @@ xhr.onload = () => {
             let li = document.createElement("li");
             li.setAttribute('id',entry.name);
             let population = entry.population;
-            let text =  entry.name + " : " + population;
+            population = population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            let text =  entry.name + "  :  " + population;
             li.appendChild(document.createTextNode(text));
             ol.appendChild(li);
         })

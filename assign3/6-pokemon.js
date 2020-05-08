@@ -1,7 +1,6 @@
 
 const url = 'https://pokeapi.co/api/v2/pokemon/';
 
-let div = document.getElementById("result");
 let count = 0;
 
 let getDataAsync = async (url) => 
@@ -25,14 +24,8 @@ let getDataAsync = async (url) =>
         }
        
         data.results.forEach(function(result) {
-            let span = document.createElement("span");
-            let br = document.createElement("br");
             let name = (result.name).toUpperCase();
-            count ++;
-            span.setAttribute('id',name);
-            span.appendChild(document.createTextNode( count + ") " + name ));
-            span.appendChild(br);
-            div.appendChild(span);
+            document.getElementById("name").innerHTML += name + " ,  "
         });
    }
         
