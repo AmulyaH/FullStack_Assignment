@@ -12,11 +12,11 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
-app.get('/', function(req, res){
+app.get('/submit', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-app.post('/',function(req,res){
+app.post('/submit',function(req,res){
     var name = req.body.fname;
     var email= req.body.email;
     var comment = req.body.message;
