@@ -3,17 +3,27 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 
 var app = express();
+var visitedRoutes = [];
 
 app.use(cookieParser());
-app.use(session({secret: "Shh, its a secret!"}));
+app.use(session({secret: "ghghf",
+                 resave: false,
+                 saveUninitialized: true}));
 
-app.get('/', function(req, res){
+app.get('/*', function(req, res){
+   res.write("Currently on route:" + req.originalUrl + "\n" +  "\n");
    if(req.session.page_views){
-      req.session.page_views++;
-      res.send("You visited this page " + req.session.page_views + " times");
+      res.write("Previously visited" + "\n" + "\n");
+      visitedRoutes.forEach(route => res.write(route + "\n"));
    } else {
       req.session.page_views = 1;
-      res.send("Welcome to this page for the first time!");
+      var fullUrl = req.protocol + '://' + req.get('host');
+      res.write("Welcome to " + fullUrl);
+   }
+   res.send();
+   if(visitedRoutes.indexOf(req.originalUrl) == -1)
+   {
+      visitedRoutes.push(req.originalUrl);
    }
 });
-app.listen(3000);
+app.listen(5000);
