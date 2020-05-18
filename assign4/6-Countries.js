@@ -1,11 +1,12 @@
 const https = require('https');
 let data = '';
-const port = 5000;
+const port = 3000;
 
 var express = require('express'),
     app = express();
 
 var lookup = {};
+var population = "";
 
 https.get('https://restcountries.eu/rest/v2/all', (resp) => {
   
@@ -14,8 +15,6 @@ https.get('https://restcountries.eu/rest/v2/all', (resp) => {
   });
 
   resp.on('end', () => {
-     
-    console.log(JSON.parse(data));
     data = JSON.parse(data);
   });
 
@@ -38,7 +37,7 @@ app.get('/main', function(req, res) {
         {
             if(entry.population > 20000000)
             {
-                var population = entry.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                population = entry.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 res.write(entry.name+ " : " + population + '\n')
             }
         })
@@ -62,6 +61,16 @@ app.get('/main', function(req, res) {
           }
         res.send();
         lookup = {};
+  });
+
+
+  app.get('/custom', function(req, res) {
+    res.write("COUNTRY  : CAPITAL CITY  : POPULATION" + '\n');
+    data.forEach(function(entry) 
+    {
+        population = entry.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        res.write(entry.name+ " : " + entry.capital + " : " + population + '\n')
+    })
   });
 
   app.listen(port);
