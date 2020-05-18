@@ -1,3 +1,4 @@
+const port = 5000;
 var express = require('express');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
@@ -26,4 +27,4 @@ app.get('/*', function(req, res){
       visitedRoutes.push(req.originalUrl);
    }
 });
-app.listen(5000);
+app.listen(port);
